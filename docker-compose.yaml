@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  app:
+    image: matiasbasile/varcreative
+    container_name: test-app
+    restart: always
+    working_dir: /var/www/
+    volumes:
+      - .:/var/www
+
+  nginx:
+    image: matiasbasile/nginx:latest
+    container_name: test-nginx
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www
+      - ./docker/nginx:/etc/nginx/conf.d/
+
+  mysql:
+    image: matiasbasile/mysql
+    restart: always
+    command: mariadbd --sql_mode=""
+    container_name: test-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=base
+    volumes:
+      - test-data:/var/lib/mysql
+
+  phpmyadmin:
+    container_name: test-phpmyadmin
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 7500:80
+    environment:
+      - PMA_ARBITRARY=1
+
+volumes:
+  test-data:

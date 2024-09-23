@@ -1,0 +1,128 @@
+.div1 {
+  text-align: center;
+  padding: 30px; 
+  background-color: #8ba4c4; 
+  font-size: 30px; 
+  line-height: 1; 
+  border: 2px solid #333; 
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+body{
+  background-color: lightblue;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin: 70px;
+}
+
+input {
+  width: 250px;
+  padding: 10px;
+  margin: 5px 0; 
+  border: 2px solid #333; 
+  border-radius: 5px;
+  font-size: 16px; 
+}
+
+.boton {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  width: 200px;
+}
+
+.tabla_listado {
+  width: 90%; 
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  background-color: lightblue;
+}
+th, td {
+  border:solid 2px #333;
+  padding: 10px;
+}
+.edit, .delete {
+  text-decoration: none;
+  width: 17px;
+  background-color: white;
+  font-weight: bold;
+
+}
+
+.agregar{
+  height: 40px;
+  left: 15px;
+  position: absolute;
+  top: 10px;
+  width: 160px;
+  font-size: 34px;
+  background-color: white;
+  text-decoration: none; 
+  border: 2px solid #333; 
+  text-align: center;
+
+  
+ 
+}
+
+.logout { 
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
+.div2 {
+  background-color:  #8ba4c4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  border: 2px solid #333; 
+  font-size: 20px;
+  text-align: center;
+
+
+}
+
+.boton2 {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  width: 200px;
+ 
+
+}
+
+
+.error{
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 22px;
+  top: 230px;
+  position: absolute;
+
+}
