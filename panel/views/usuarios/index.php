@@ -1,5 +1,9 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 include("../../includes/db.php");
+//include("../../menu.php");
 @session_start();
 
 $email = isset($_POST["email"]) ? $_POST["email"] : "";
@@ -18,7 +22,7 @@ if(!empty($email) && !empty($pass)){
         echo '<div class="error">Usuario o contraseña incorrecta</div>'; 
     } else {
         $_SESSION["id"] = $usuario->id;
-        header("Location: /views/usuarios/listado.php");
+        header("Location: ../../index.php");
         exit();
     }
 }
@@ -28,11 +32,12 @@ if(!empty($email) && !empty($pass)){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>Login</title>
 </head>
 <body>
 <div class="div1">   
+
    
 <form method="POST">
     <h2>Login:</h2> 

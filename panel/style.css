@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+.menu {
+    height: 100%;
+    width: 170px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.menu a, .menu button {
+    padding: 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    text-align: justify;
+    background-color: black;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+.menu a:hover, .menu button:hover {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    background-color: rgb(26, 206, 238);
+    border-radius: 10px;
+}
+.menu i  {
+    margin-right: 5px;
+}
+.menu button {
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.agregar_not {
+  margin-left: 100px;
+}
+.texto {
+    width: 100%;
+    margin-left: 270px;
+    font-size: 15px;
+    padding: 0 10px;
+    text-align: justify;
+    display: flex;
+}
+.menu p {
+    text-align: justify;
+}
+
+
+.div1 {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px; 
+    background-color: #ffffff; 
+    font-size: 30px; 
+    line-height: 1; 
+    border: 2px solid #333; 
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabla_listado {
+    width: 80%; 
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    
+}
+th, td {
+    border:solid 2px #333;
+    padding: 10px;
+}
+.edit, .delete {
+    text-decoration: none;
+    width: 17px;
+    background-color: white;
+    font-weight: bold;
+  
+}
+  
+.agregar {
+    margin-left: 200px;
+    height: 40px;
+    left: 15px;
+    position: absolute;
+    top: 10px;
+    width: 160px;
+    font-size: 34px;
+    background-color: white;
+    text-decoration: none; 
+    text-align: center;
+}
+
+table {
+    display: table; 
+    width: 60%;
+    border-collapse: collapse;
+
+  }
+  th, td {
+    border: 1px solid #ccc; 
+    padding: 10px;     
+    max-width: 180px; 
+    overflow: hidden;     
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+
+.t_categorias {
+    width: 70%;
+}
+
+.div_noticias {
+    position: absolute; 
+    right: 5000px;
+}

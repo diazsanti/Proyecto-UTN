@@ -1,6 +1,12 @@
-<?php 
+<?php
+
 include("../../includes/db.php");
 require_once("../../controllers/validar_user.php");
+include("../../menu.php");
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL); 
 
 if (isset($_GET["id"])){
     $id = $_GET["id"];
@@ -18,7 +24,7 @@ if (isset($_GET["id"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
     <title></title>
 </head>
 <body>
@@ -28,7 +34,7 @@ if (isset($_GET["id"])){
     <?php } else { ?> 
         <h1>Nuevo usuario:</h1> <br>
     <?php } ?>  
-    <form action="/controllers/usuarios.php?operacion=<?php echo (isset($_GET["id"])) ? "EDIT" : "NEW" ?>" method="post">
+    <form action="../../controllers/usuarios.php?operacion=<?php echo (isset($_GET["id"])) ? "EDIT" : "NEW" ?>" method="post">
         <input type="hidden" name="id" value="<?php echo (isset($_GET["id"])) ? $usuario->id : "" ?>">
         <div>
             <label>Email:</label>

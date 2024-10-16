@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include_once("../includes/db.php");
 require_once("validar_user.php");
 $operacion = $_GET["operacion"];
@@ -30,5 +34,5 @@ if ($operacion == "NEW") {
 
 
 
-header("Location: /views/usuarios/listado.php");
+header("Location: ../views/usuarios/listado.php");
 ?>

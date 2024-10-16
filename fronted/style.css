@@ -1,0 +1,73 @@
+body {
+    /*font-family: Arial, sans-serif; */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.noti {
+    
+    text-align: center;
+    color: blue;
+}
+
+.item {
+    width: 40%;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.noticia_detalle {
+    width: 100%; /* Ampliar el div al 80% del ancho de la pantalla */
+    max-width: 1200px; /* Definir un ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centrará el div horizontalmente */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.vermas {
+    color: blue;
+}
+ .inicio {
+    
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    width: 100px; 
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    margin: 10px;
+    border-radius: 5px; 
+    text-decoration: none;
+}
+
+.volvernoti {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    margin: 10px;
+    border-radius: 5px; 
+    text-decoration: none;
+    padding: 10px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    width: 100px; 
+    text-align: center;
+    background-color: white;
+    color: black;
+
+}
