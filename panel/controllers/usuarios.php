@@ -8,20 +8,21 @@ require_once("validar_user.php");
 $operacion = $_GET["operacion"];
 
 if ($operacion == "NEW") {
-    
+    $nombre = $_POST["nombre"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $stmt = $conx->prepare("INSERT INTO usuarios (email, password) VALUES (?, ?) ");
-    $stmt ->bind_param("ss", $email, $password); 
+    $stmt = $conx->prepare("INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?) ");
+    $stmt ->bind_param("sss", $nombre,$email, $password); 
     $stmt->execute();
 
 } else if ($operacion == "EDIT"){
 
     $id = $_POST["id"];
+    $nombre = $_POST["nombre"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $stmt = $conx->prepare("UPDATE usuarios SET email = ?, password = ? WHERE id = ? ");
-    $stmt ->bind_param("ssi", $email, $password, $id); 
+    $stmt = $conx->prepare("UPDATE usuarios SET nombre = ?, email = ?, password = ? WHERE id = ? ");
+    $stmt ->bind_param("sssi", $nombre, $email, $password, $id); 
     $stmt->execute();
 
 } else if ($operacion == "DELETE"){

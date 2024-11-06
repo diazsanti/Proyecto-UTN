@@ -12,6 +12,17 @@ $operacion = $_GET["operacion"];
 if ($operacion == "NEW") {;
     $nombre = $_POST["nombre"];
     $id_usuario = $_POST["id_usuario"];
+
+    $stmt = $conx->prepare("SELECT id FROM categorias WHERE nombre = ?");
+    $stmt->bind_param("s", $nombre);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+    if ($resultado->num_rows > 0) {
+        echo "<script>alert('La categoría ya existe.'); window.history.back();</script>";
+        exit; 
+    }
+
     $stmt = $conx->prepare("INSERT INTO categorias (nombre, id_usuario) VALUES (?,?) ");
     $stmt -> bind_param("si", $nombre, $id_usuario );
     $stmt->execute();
